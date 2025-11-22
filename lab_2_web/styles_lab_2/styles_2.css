@@ -1,0 +1,221 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: white;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 20px solid #eee;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2c3e50;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+.active {
+    color: tomato;
+}
+
+main {
+    padding: 50px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Стили для сетки блюд */
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    border-radius: 35px;
+    background-color: white;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+    transition: border 0.1s, background-color 0.1s;
+}
+
+.dish-item:hover {
+    border: 3px solid tomato;
+}
+
+.dish-item img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.price {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.weight {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dish-item:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    margin-top: auto;
+}
+
+/* Страница "Собрать ланч" - адаптивность */
+@media (max-width: 800px) {
+    .dish-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    nav ul {
+        justify-content: space-between;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 20px;
+    }
+    
+    section h2 {
+        text-align: center;
+    }
+    
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Главная страница - адаптивность */
+@media (max-width: 800px) {
+    .about-image {
+        width: 500px;
+        max-width: 100%;
+    }
+    
+    nav ul {
+        justify-content: space-between;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 20px;
+    }
+    
+    .about-image {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    table {
+        font-size: 12px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .dish-item {
+        padding: 20px 25px;
+    }
+}
