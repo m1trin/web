@@ -1,0 +1,442 @@
+/* МИНИМАЛИСТИЧНЫЕ СТИЛИ ДЛЯ ПЕРВОГО ЭТАПА */
+
+/* Общие */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.brand-text {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #555;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Область уведомлений */
+#notification-area {
+    min-height: 20px;
+}
+
+/* Блок описания школы */
+.school-description {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.display-4 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lead {
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* Футер */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 0.95rem;
+}
+
+.footer h5 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.social-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .brand-text {
+        font-size: 1.2rem;
+    }
+    .school-description {
+        padding: 20px;
+    }
+}
+
+/* БЛОК ПРЕИМУЩЕСТВ */
+.advantages .card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+}
+
+.advantages .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.advantages .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.advantages .card-text {
+    color: #555;
+}
+
+/* ФОРМА ПОИСКА */
+.search-courses {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-courses h3 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* БЛОК КУРСОВ */
+.courses-list {
+    min-height: 300px;
+}
+
+.course-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.course-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-card .card-body {
+    padding: 20px;
+}
+
+.course-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.course-level {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.level-beginner {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.level-intermediate {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.level-advanced {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.course-teacher {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ПАГИНАЦИЯ */
+.pagination .page-link {
+    color: #2c3e50;
+    border: 1px solid #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    .advantages .card {
+        margin-bottom: 15px;
+    }
+    
+    .search-courses {
+        padding: 15px;
+    }
+}
+
+/* БЛОК РЕПЕТИТОРОВ */
+.tutors-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-tutors {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.search-tutors h4 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* КАРТОЧКА РЕПЕТИТОРА */
+.tutor-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.tutor-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.tutor-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.tutor-experience {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.tutor-languages {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.tutor-languages span {
+    display: inline-block;
+    background-color: #f5f5f5;
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.tutor-price {
+    font-weight: 600;
+    color: #27ae60;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* СВЯЗЬ С КУРСАМИ */
+#tutors-note {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ РЕПЕТИТОРОВ */
+@media (max-width: 768px) {
+    .tutors-section {
+        padding: 20px 15px;
+    }
+    
+    .tutor-card {
+        padding: 15px;
+    }
+    
+    .search-tutors {
+        padding: 15px;
+    }
+}
+
+/* СТИЛИ ДЛЯ ПОИСКА РЕПЕТИТОРОВ */
+
+.search-tutors {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.search-tutors h4 {
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.search-tutors .form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.search-tutors .form-text {
+    color: #6c757d;
+}
+
+/* Анимация для результатов поиска */
+#tutors-list {
+    transition: all 0.3s ease;
+}
+
+/* Стили для информационного сообщения */
+#tutors-search-info .alert-light {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+#tutors-search-info .btn-outline-secondary {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+}
+
+/* Адаптивность для формы поиска */
+@media (max-width: 768px) {
+    .search-tutors {
+        padding: 15px;
+    }
+    
+    .search-tutors .col-md-4 {
+        margin-bottom: 15px;
+    }
+    
+    .search-tutors .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* СТИЛИ ДЛЯ ФОРМЫ ЗАЯВКИ */
+
+#orderModal .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#orderModal .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #0d6efd;
+}
+
+#orderModal .form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+#orderModal .form-text {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+#orderModal .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#orderModal .form-check-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+#orderModal .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+#orderModal #total-price {
+    font-weight: 700;
+    color: #198754;
+}
+
+#orderModal .btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    padding: 10px 30px;
+    font-weight: 500;
+}
+
+#orderModal .btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #orderModal .modal-dialog {
+        margin: 10px;
+    }
+    
+    #orderModal .modal-content {
+        border-radius: 8px;
+    }
+    
+    #orderModal .btn-success {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

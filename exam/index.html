@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language School — Изучение иностранных языков</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    /* СТИЛИ ДЛЯ УВЕДОМЛЕНИЙ */
+    #notification-area {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        z-index: 9999;
+        width: 350px;
+        max-width: calc(100vw - 40px);
+    }
+    
+    .notification-item {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 10px;
+        animation: slideIn 0.3s ease-out;
+        border-radius: 8px;
+        border-left: 4px solid;
+    }
+    
+    .notification-item.alert-success {
+        border-left-color: #198754;
+    }
+    
+    .notification-item.alert-danger {
+        border-left-color: #dc3545;
+    }
+    
+    .notification-item.alert-warning {
+        border-left-color: #ffc107;
+    }
+    
+    .notification-item.alert-info {
+        border-left-color: #0dcaf0;
+    }
+    
+    .notification-item.alert-primary {
+        border-left-color: #0d6efd;
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        #notification-area {
+            top: 70px;
+            right: 10px;
+            left: 10px;
+            width: auto;
+        }
+    }
+</style>
+    <link rel="icon" href="assets/logo.jpg" type="image/png">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.jpg" alt="Логотип Language School" height="50">
+                    <span class="brand-text">Language School</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#courses">Курсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tutors">Репетиторы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacts">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cabinet.html">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ОБЛАСТЬ УВЕДОМЛЕНИЙ -->
+    <div id="notification-area" class="container mt-3"></div>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="container mt-5">
+
+        <!-- БЛОК ОПИСАНИЯ ШКОЛЫ -->
+        <section id="about" class="school-description mb-5">
+            <h1 class="display-4">Language School</h1>
+            <p class="lead">Мы — современная языковая школа, которая помогает студентам со всего мира изучать иностранные языки эффективно и с удовольствием.</p>
+            <p>Наша миссия — сделать образование доступным, интересным и практико-ориентированным. Мы предлагаем курсы по английскому, испанскому, немецкому, французскому, китайскому и другим языкам.</p>
+            <p>У нас работают профессиональные преподаватели и носители языка, используется коммуникативная методика, интерактивные материалы и индивидуальный подход к каждому студенту.</p>
+        </section>
+
+        <!-- Здесь позже будут другие блоки: преимущества, курсы, репетиторы -->
+                <!-- БЛОК ПРЕИМУЩЕСТВ ИЗУЧЕНИЯ ЯЗЫКА -->
+        <section id="advantages" class="advantages mb-5">
+            <h2 class="text-center mb-4">Преимущества изучения иностранного языка</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Карьерные возможности</h5>
+                            <p class="card-text">Знание иностранных языков открывает двери в международные компании и увеличивает вашу зарплату.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Путешествия без границ</h5>
+                            <p class="card-text">Свободно общайтесь с местными жителями, понимайте культуру и чувствуйте себя комфортно в любой стране.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Развитие мозга</h5>
+                            <p class="card-text">Изучение языка улучшает память, внимание и многозадачность, а также замедляет старение мозга.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ФОРМА ПОИСКА КУРСОВ -->
+        <section id="search" class="search-courses mb-5">
+            <h3 class="mb-3">Поиск курсов</h3>
+            <form id="course-search-form" class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="course-name" placeholder="Название курса">
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" id="course-level">
+                        <option value="">Все уровни</option>
+                        <option value="Beginner">Начальный</option>
+                        <option value="Intermediate">Средний</option>
+                        <option value="Advanced">Продвинутый</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">Найти</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- БЛОК ПРЕДЛАГАЕМЫХ КУРСОВ -->
+        <section id="courses" class="courses mb-5">
+            <h2 class="text-center mb-4">Предлагаемые курсы</h2>
+            <div id="courses-list" class="row">
+                <!-- Курсы будут загружены через JavaScript -->
+                <div class="col-12 text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Загрузка...</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ПАГИНАЦИЯ КУРСОВ -->
+            <nav id="courses-pagination" aria-label="Навигация по курсам" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <!-- Пагинация будет сгенерирована через JavaScript -->
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Загрузка...</a>
+                    </li>
+                </ul>
+            </nav>
+                <!-- БЛОК РЕПЕТИТОРОВ И ПОИСКА -->
+    <section id="tutors" class="tutors-section mb-5">
+        <h2 class="text-center mb-4">Наши репетиторы</h2>
+        
+        <!-- ФОРМА ПОИСКА РЕПЕТИТОРОВ -->
+        <div class="search-tutors mb-4">
+            <h4 class="mb-3">Поиск репетитора</h4>
+            <form id="tutor-search-form" class="row g-3">
+                <div class="col-md-4">
+                    <label for="tutor-qualification" class="form-label small text-muted mb-1">Уровень квалификации</label>
+                    <select class="form-select" id="tutor-qualification">
+                        <option value="">Все уровни</option>
+                        <option value="Beginner">Начальный</option>
+                        <option value="Intermediate">Средний</option>
+                        <option value="Advanced">Продвинутый</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="tutor-experience" class="form-label small text-muted mb-1">Минимальный опыт (лет)</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="tutor-experience" 
+                            placeholder="0" min="0" max="50" step="1">
+                        <span class="input-group-text">лет</span>
+                    </div>
+                    <div class="form-text small">Введите число от 0 до 50</div>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-search me-1"></i>
+                        Найти
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Блок подсказок для поиска -->
+            <div class="mt-3">
+                <small class="text-muted">
+                    <i class="bi bi-lightbulb me-1"></i>
+                    Совет: вы можете использовать фильтры по отдельности или вместе для точного поиска
+                </small>
+            </div>
+        </div>
+        
+        <!-- СПИСОК РЕПЕТИТОРОВ -->
+        <div class="row">
+            <div class="col-12">
+                <div id="tutors-list" class="row">
+                    <!-- Репетиторы будут загружены через JavaScript -->
+                    <div class="col-12 text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Загрузка репетиторов...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ПРИМЕЧАНИЕ О ВЫБОРЕ КУРСА -->
+        <div class="mt-3 text-center text-muted">
+            <small id="tutors-note">Репетиторы отображаются для всех курсов. Выберите курс, чтобы увидеть специалистов.</small>
+        </div>
+    </section>
+
+                <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ЗАЯВКИ (ПОЛНАЯ РЕАЛИЗАЦИЯ) -->
+        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">Оформление заявки</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Форма будет заполнена через JavaScript -->
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Загрузка формы...</span>
+                            </div>
+                            <p class="mt-3">Загрузка формы заявки...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Контакты</h5>
+                    <p>Москва, ул. Образцова, 17</p>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@languageschool.ru</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Мы в соцсетях</h5>
+                    <a href="#" class="social-link">Facebook</a> |
+                    <a href="#" class="social-link">Instagram</a> |
+                    <a href="#" class="social-link">VK</a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <p class="text-center mb-0">&copy; 2024 Language School. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Наш JS -->
+    <script src="js/api.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/modal.js"></script> <!-- Убедитесь что modal.js подключен -->
+    <script src="js/main.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

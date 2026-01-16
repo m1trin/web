@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Проверка API</h3>
+    <button onclick="checkAPI()">Проверить</button>
+    <div id="result"></div>
+    
+    <script>
+    async function checkAPI() {
+        const apiUrl = 'http://exam-api-courses.std-900.ist.mospolytech.ru/api/courses';
+        const result = document.getElementById('result');
+        
+        try {
+            result.innerHTML = 'Пытаюсь подключиться...<br>';
+            
+            // Пробуем разные варианты
+            
+            // Вариант 1: Простейший запрос
+            result.innerHTML += '1. Прямой запрос без заголовков... ';
+            try {
+                const res1 = await fetch(apiUrl);
+                result.innerHTML += `OK (статус: ${res1.status})<br>`;
+            } catch (e) {
+                result.innerHTML += `Ошибка: ${e.message}<br>`;
+            }
+            
+            // Вариант 2: С API ключом
+            result.innerHTML += '2. С API ключом... ';
+            try {
+                const res2 = await fetch(apiUrl, {
+                    headers: {
+                        'X-API-Key': '62cf6ca7-05c7-4c73-8643-37b6b0145e03'
+                    }
+                });
+                result.innerHTML += `OK (статус: ${res2.status})<br>`;
+            } catch (e) {
+                result.innerHTML += `Ошибка: ${e.message}<br>`;
+            }
+            
+            // Вариант 3: Через CORS прокси
+            result.innerHTML += '3. Через CORS прокси... ';
+            try {
+                const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl);
+                const res3 = await fetch(proxyUrl, {
+                    headers: {
+                        'X-API-Key': '62cf6ca7-05c7-4c73-8643-37b6b0145e03'
+                    }
+                });
+                result.innerHTML += `OK (статус: ${res3.status})<br>`;
+            } catch (e) {
+                result.innerHTML += `Ошибка: ${e.message}<br>`;
+            }
+            
+        } catch (error) {
+            result.innerHTML += `<br><strong>Общая ошибка:</strong> ${error.message}`;
+        }
+    }
+    </script>
+</body>
+</html>
